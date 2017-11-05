@@ -2,25 +2,25 @@ import React from 'react';
 import { StyleSheet, Alert, ActivityIndicator, Vibration, Text, TextInput, View, Button } from 'react-native';
 
 export default class PizzaTranslator extends React.Component {
-	constructor(props){
+	constructor(props) {
 		super(props);
 		this.state = {
 			text: ''
-		}
+		};
 	}
 
   _onPressButton() {
-    Alert.alert('You tapped the button!')
+    Alert.alert('You tapped the button!');
   }
 
-	render(){
-		return(
-			  <View style={styles.container}>
-			    <View style={styles.buttonContainer}>
-			      <Button
+	render() {
+		return (
+			<View style={styles.container}>
+				<View style={styles.buttonContainer}>
+			    	<Button
 			        onPress={this._onPressButton}
 			        title="Press Me!!!!"
-			      />
+			    	/>
 			    </View>
 			    <View style={styles.buttonContainer}>
 			      <Button
@@ -40,9 +40,9 @@ export default class PizzaTranslator extends React.Component {
 			        color="#841584"
 			      />
 			    </View>
-			    <ActivityIndicator animatin></ActivityIndicator>
+			    <ActivityIndicator />
 			  </View>
-		)
+		);
 	}
 }
 
@@ -60,4 +60,4 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   }
-})
+});
